@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10091b">
+<meta name="description" content="Um presentinho de Dia das Crianças feito com carinho, só pra você.">
+<title>Feliz Dia das Crianças, meu amor 💜</title>
+<style>
+:root{--bg:#0b0711;--panel:#171020;--purple:#a855f7;--pink:#ff77c8;--lav:#e7c8ff;--text:#fff7ff;--muted:#c7b6d3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#32124d 0%,#140b20 42%,var(--bg) 78%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.stars,.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.55;animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{50%{opacity:.15;transform:scale(.6)}}
+main{position:relative;z-index:1;width:min(100% - 28px,900px);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;color:var(--lav);font-size:.9rem}
+.logo{font-weight:800;letter-spacing:.08em}.pill{border:1px solid #ffffff24;border-radius:999px;padding:8px 12px;background:#ffffff08}
+.hero{min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 0 60px}
+.eyebrow{color:var(--pink);font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;font-weight:800}
+h1{font-size:clamp(2.7rem,9vw,5.8rem);line-height:.98;letter-spacing:-.06em;margin:18px 0;background:linear-gradient(120deg,#fff 15%,#e5b8ff 52%,#ff9bd8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{max-width:570px;line-height:1.8;color:var(--muted);font-size:1.04rem}
+.cat-stage{width:220px;height:190px;display:grid;place-items:center;position:relative;margin:10px auto 8px}
+.cat-glow{position:absolute;width:145px;height:145px;border-radius:50%;background:#a855f733;filter:blur(22px)}
+.cat{position:relative;font-size:100px;filter:drop-shadow(0 12px 22px #a855f744);animation:bounce 1.3s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(5px) rotate(-4deg)}50%{transform:translateY(-16px) rotate(4deg)}}
+.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+.btn{border:0;border-radius:999px;padding:14px 21px;font-weight:800;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.primary{color:#210b2d;background:linear-gradient(110deg,#e6b7ff,#ff9bd8);box-shadow:0 8px 28px #d76cff33}
+.secondary{color:var(--text);background:#ffffff0b;border:1px solid #ffffff2a}
+section{padding:54px 0}
+.section-label{color:var(--pink);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
+h2{font-size:clamp(1.8rem,5vw,3rem);margin:10px 0 14px;letter-spacing:-.04em}
+.card{background:linear-gradient(145deg,#21152eeb,#120c1beF);border:1px solid #ffffff18;border-radius:28px;padding:clamp(22px,5vw,38px);box-shadow:0 20px 80px #0003}
+.letter{line-height:1.95;color:#e8dced;font-size:1.02rem}
+.letter p{margin:0 0 16px}.signature{color:#ff9bd8;font-weight:800;font-size:1.15rem}
+.hidden{display:none!important}
+.reveal{animation:reveal .65s ease both}
+@keyframes reveal{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.memories{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.memory{min-height:145px;border:1px solid #ffffff1b;border-radius:20px;padding:18px;background:#ffffff08;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:9px}
+.memory span{font-size:2rem}.memory strong{font-size:.95rem}.memory small{color:var(--muted);line-height:1.5}
+.gif-card{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.gif-frame{border-radius:24px;overflow:hidden;background:#fff;min-height:260px;display:grid;place-items:center}
+.gif-frame iframe{width:100%;height:300px;border:0}.gif-fallback{padding:18px;text-align:center;color:#34223d}
+.gif-fallback a{color:#7536a5}
+.surprise{position:relative;overflow:hidden;text-align:center}
+.big-heart{font-size:4rem;display:inline-block;animation:heartbeat 1.2s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.15)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+footer{text-align:center;padding:35px 0 48px;color:#a994b7;font-size:.85rem}
+.floating{position:fixed;z-index:5;pointer-events:none;animation:floatup 1.8s ease-out forwards;font-size:24px}
+@keyframes floatup{from{transform:translateY(0) scale(.7);opacity:1}to{transform:translateY(-180px) scale(1.4);opacity:0}}
+.modal-wrap{position:fixed;inset:0;z-index:10;background:#08040ddd;display:grid;place-items:center;padding:18px}
+.modal{width:min(100%,480px);text-align:center;background:linear-gradient(145deg,#281638,#130c1d);border:1px solid #ffffff24;border-radius:28px;padding:30px;box-shadow:0 20px 90px #0008;animation:reveal .35s ease}
+.modal h2{color:#ffc0e7}.modal p{color:#e8dced;line-height:1.8}
+@media(max-width:650px){.memories{grid-template-columns:1fr}.memory{min-height:110px}.gif-card{grid-template-columns:1fr}.gif-frame iframe{height:280px}.hero{min-height:76vh}.cat-stage{height:155px}.cat{font-size:86px}nav{font-size:.8rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div><div class="hearts" id="hearts"></div>
+<main>
+<nav><div class="logo">♡ UM PRESENTE PRA VOCÊ</div><div class="pill">feito com carinho 💜</div></nav>
+<header class="hero">
+  <div class="eyebrow">um presentinho só nosso</div>
+  <div class="cat-stage"><div class="cat-glow"></div><div class="cat" aria-label="gatinho feliz">🐈‍⬛</div></div>
+  <h1>Feliz Dia das Crianças,<br>meu amor 💜</h1>
+  <p class="subtitle">Mesmo a gente crescendo, sempre merece um pouquinho de magia, brincadeira e carinho. Fiz esse cantinho só pra você, meu amor. 💜</p>
+  <div class="actions"><button class="btn primary" id="openLetter">Abrir sua cartinha 💌</button><button class="btn secondary" id="sprinkle">Tocar nos corações ✨</button></div>
+</header>
+<section id="carta">
+  <div class="section-label">feito especialmente pra você</div><h2>Uma cartinha do meu coração</h2>
+  <div class="card letter" id="letterCard">
+    <p>Meu amor, 💜</p>
+    <p>Feliz Dia das Crianças, meu amor! 💜 Eu sei que a gente tá crescendo, mas isso não significa que precisa deixar de gostar das coisas fofas, de brincar, de rir à toa ou de ter um dia só pra receber carinho. Eu queria fazer alguma coisa diferente pra você, algo que mostrasse o quanto você é importante pra mim.</p>
+    <p>Eu tenho 16 anos, você tem 15, e ainda temos tanta coisa pra descobrir, aprender e viver. Mas hoje eu queria que você soubesse que eu fico muito feliz por ter você na minha vida. Seu jeitinho, suas mensagens e até as pequenas coisas que talvez você nem perceba conseguem deixar meus dias melhores.</p>
+    <p>Espero que seu dia seja cheio de momentos leves, risadas sinceras, coisinhas fofas e motivos pra sorrir. Você merece carinho, respeito, paciência e muita felicidade — hoje e em todos os outros dias também.</p>
+    <p>Obrigado por ser você. Esse site é simples, mas foi feito pensando em você, meu amor. Se eu pudesse, colocava um gatinho pulando de alegria em cada pedacinho da internet só pra deixar seu Dia das Crianças mais feliz. 🐈‍⬛💗</p>
+    <p class="signature">Com todo o meu carinho, de alguém que gosta muito de você. ♡</p>
+  </div>
+</section>
+<section>
+  <div class="section-label">pequenas coisas, sentimentos enormes</div><h2>Três desejos pra você ✨</h2>
+  <div class="memories">
+    <div class="memory"><span>🌷</span><strong>Que você floresça</strong><small>Que nunca falte espaço pra você ser quem é e crescer do seu jeito.</small></div>
+    <div class="memory"><span>🌙</span><strong>Que você tenha paz</strong><small>Que os dias difíceis passem e você sempre encontre um motivo pra sorrir.</small></div>
+    <div class="memory"><span>💜</span><strong>Que se sinta amada</strong><small>Que você nunca esqueça o quanto merece ser tratada com carinho e respeito.</small></div>
+  </div>
+</section>
+<section>
+  <div class="gif-card">
+    <div><div class="section-label">nível de felicidade: 1000%</div><h2>EU QUANDO LEMBRO DE VOCÊ</h2><p class="subtitle">Eu tentando agir normalmente depois de receber uma mensagem sua:</p><button class="btn primary" id="catParty">Fazer o gatinho comemorar 🐾</button></div>
+    <div class="gif-frame">
+      <iframe title="GIF do gatinho pulando de alegria do Tenor" src="https://tenor.com/embed/23730276" loading="lazy" allowfullscreen></iframe>
+      <noscript><p class="gif-fallback">Veja o <a href="https://tenor.com/pt-BR/view/fast-cat-cat-excited-jumping-gif-23730276" target="_blank" rel="noopener">gatinho pulando no Tenor</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+<section class="card surprise">
+  <div class="big-heart">💜</div><div class="section-label">última coisinha...</div><h2>Tem uma surpresa pra você</h2>
+  <p class="subtitle" style="margin-inline:auto">Porque você chegou até aqui, merece uma chuva de carinho. Preparada?</p>
+  <button class="btn primary" id="finalSurprise">Abrir minha surpresa 🎁</button>
+</section>
+<footer>feito à mão, com carinho e um montão de corações roxos ♡<br>Feliz Dia das Crianças pra minha pessoa favorita. 💜</footer>
+</main>
+<div class="modal-wrap hidden" id="modalWrap" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal"><div style="font-size:3.3rem">💌🐈‍⬛💜</div><h2 id="modalTitle">Você é muito especial!</h2><p>Esse presente não tem embrulho, mas tem uma coisa de verdade: foi feito pensando em você. Feliz Dia das Crianças, meu amor! Que hoje você sorria muito, nunca perca seu lado brincalhão e continue encontrando magia nas pequenas coisas. 💗 💗</p><button class="btn primary" id="closeModal">Aaaawn 💜</button></div>
+</div>
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<65;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';s.style.opacity=(.2+Math.random()*.6);stars.appendChild(s)}
+function hearts(count=18){const emojis=['💜','💗','♡','✨','💖'];for(let i=0;i<count;i++){const h=document.createElement('span');h.className='floating';h.textContent=emojis[Math.floor(Math.random()*emojis.length)];h.style.left=(5+Math.random()*90)+'vw';h.style.top=(55+Math.random()*35)+'vh';h.style.animationDelay=(Math.random()*.45)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),2400)}}
+document.getElementById('openLetter').addEventListener('click',()=>{document.getElementById('letterCard').classList.add('reveal');document.getElementById('carta').scrollIntoView({behavior:'smooth'});hearts(12)});
+document.getElementById('sprinkle').addEventListener('click',()=>hearts(28));
+document.getElementById('catParty').addEventListener('click',()=>{hearts(35);const cat=document.querySelector('.cat');cat.textContent='😻';cat.style.transform='scale(1.3)';setTimeout(()=>{cat.textContent='🐈‍⬛';cat.style.transform=''},1300)});
+const modal=document.getElementById('modalWrap');
+document.getElementById('finalSurprise').addEventListener('click',()=>{modal.classList.remove('hidden');hearts(45)});
+document.getElementById('closeModal').addEventListener('click',()=>modal.classList.add('hidden'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.add('hidden')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.add('hidden')});
+</script>
+</body>
+</html>
